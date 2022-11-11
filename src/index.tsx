@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -21,10 +21,11 @@ const rootReducer = combineReducers({
 const store = configureStore({ reducer: rootReducer });
 
 export type RootState = ReturnType<typeof rootReducer>;
-
-ReactDOM.render(
+const container = document.getElementById('myApp');
+const root = createRoot(container!);
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.querySelector('#myApp')
+  </Provider>
 );
+
