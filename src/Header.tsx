@@ -3,21 +3,14 @@ import React from 'react';
 export const Header: React.FC = () => {
   return (
     <header className="navbar navbar-dark bg-dark">
-      <a
-        className="navbar-brand"
-        href="https://ogaoga.github.io/json-visual-editor/"
-      >
+      <div  className="navbar-brand">
         JSON Visual Editor <span className="badge badge-secondary">v2</span>
-      </a>
+      </div>
       <ul className="nav justify-content-end">
         <li>
-          <a
-            href="https://github.com/ogaoga/json-visual-editor/issues/new"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fas fa-comment" /> Feedback
-          </a>
+          <div>
+            <i className="fas fa-comment" />
+          </div>
         </li>
       </ul>
     </header>

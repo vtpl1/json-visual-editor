@@ -93,9 +93,8 @@ const ObjectType: React.FC<Props> = ({ data, path, insert = true }) => {
           {insert && (
             <td className="button-cell">
               <i
-                className={`fas fa-plus-circle ${
-                  editMode !== null ? 'invisible' : ''
-                }`}
+                className={`fas fa-plus-circle ${editMode !== null ? 'invisible' : ''
+                  }`}
                 data-name={name}
                 onClick={onAddButtonClicked}
               />
@@ -109,8 +108,8 @@ const ObjectType: React.FC<Props> = ({ data, path, insert = true }) => {
                 hidden={editMode !== null}
               />
               {editMode !== null &&
-              editMode.type === EditType.Key &&
-              _.isEqual(newPath, editMode.path) ? (
+                editMode.type === EditType.Key &&
+                _.isEqual(newPath, editMode.path) ? (
                 <KeyEditor
                   path={newPath}
                   defaultValue={name}
@@ -129,8 +128,8 @@ const ObjectType: React.FC<Props> = ({ data, path, insert = true }) => {
             <div className="d-flex">
               <div className="flex-grow-1">
                 {editMode !== null &&
-                editMode.type === EditType.Value &&
-                _.isEqual(newPath, editMode.path) ? (
+                  editMode.type === EditType.Value &&
+                  _.isEqual(newPath, editMode.path) ? (
                   <ValueEditor
                     path={newPath}
                     defaultValue={data[name]}
@@ -163,9 +162,8 @@ const ObjectType: React.FC<Props> = ({ data, path, insert = true }) => {
             {insert && (
               <td className="button-cell">
                 <i
-                  className={`fas fa-plus-circle ${
-                    editMode !== null ? 'invisible' : ''
-                  }`}
+                  className={`fas fa-plus-circle ${editMode !== null ? 'invisible' : ''
+                    }`}
                   data-name={''}
                   onClick={onAddButtonClicked}
                 />

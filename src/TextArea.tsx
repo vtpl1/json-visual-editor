@@ -23,7 +23,7 @@ const TextArea: React.FC = () => {
     return data === null ? '' : JSON.stringify(data, null, tabSize);
   }, [data]);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>(
-    setTimeout(() => {}, 0)
+    setTimeout(() => { }, 0)
   );
   const { setData } = dataSlice.actions;
 
@@ -54,7 +54,7 @@ const TextArea: React.FC = () => {
         dispatch(setData(data));
         // Save to local storage
         localStorage.setItem(localStorageKey, localText);
-      } catch {}
+      } catch { }
     }, 1000);
     setTimeoutId(id);
   }, [dispatch, localText, setData]); // eslint-disable-line react-hooks/exhaustive-deps

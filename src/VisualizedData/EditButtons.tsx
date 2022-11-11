@@ -35,9 +35,8 @@ export const EditButtons: React.FC<Props> = ({
 
   return (
     <div
-      className={`edit-buttons d-flex flex-row align-items-start ${
-        hidden ? 'hidden' : ''
-      }`}
+      className={`edit-buttons d-flex flex-row align-items-start ${hidden ? 'hidden' : ''
+        }`}
     >
       <button
         title="Edit the value"
